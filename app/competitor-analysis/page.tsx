@@ -1,11 +1,10 @@
+
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import Link from "next/link"
 import { ArrowLeft, ArrowRight, BarChart3, Check, CreditCard, Heart, MapPin, Phone, Search, Star, Timer, Wallet, X } from 'lucide-react'
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -132,11 +131,11 @@ export default function CompetitorAnalysis() {
       // Process competitors
       if (data.competitors && data.competitors.length > 0) {
         const competitorsObj: Record<string, Competitor> = {}
-
+        
         // Generate random strengths and weaknesses for each competitor
         const possibleStrengths = ['Food quality', 'Service', 'Ambiance', 'Value perception', 'Menu variety', 'Location']
         const possibleWeaknesses = ['Wait times', 'Price point', 'Limited menu', 'Ambiance', 'Service inconsistency', 'Food quality']
-
+        
         data.competitors.forEach((comp: any, index: number) => {
           // Randomly select 2 strengths and 2 weaknesses
           const strengths = [...possibleStrengths].sort(() => 0.5 - Math.random()).slice(0, 2)
@@ -216,6 +215,9 @@ export default function CompetitorAnalysis() {
                 See how your restaurant compares to local competitors and calculate your potential ROI with SpotOn
               </p>
             </div>
-            <Card>
-              <CardHeader>
-                <CardTitle>Find Local Competitors & Calculate ROI</CardTit
+          </div>
+        </div>
+      </main>
+    </div>
+  )
+}
