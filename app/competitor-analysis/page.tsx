@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState } from "react"
@@ -6,23 +7,23 @@ import { ArrowLeft } from "lucide-react"
 import { CompetitorReviewChart } from "@/components/competitor-review-chart"
 
 interface BusinessInfo {
-  name: string;
-  category: string;
-  rating: number;
-  reviewCount: number;
-  hours: string;
-  phone: string;
-  address: string;
+  name: string
+  category: string
+  rating: number
+  reviewCount: number
+  hours: string
+  phone: string
+  address: string
 }
 
 interface Competitor {
-  id: string;
-  name: string;
-  rating: number;
-  vicinity: string;
-  types: string[];
-  strengths: string[];
-  weaknesses: string[];
+  id: string
+  name: string
+  rating: number
+  vicinity: string
+  types: string[]
+  strengths: string[]
+  weaknesses: string[]
 }
 
 export default function CompetitorAnalysis() {
@@ -68,8 +69,6 @@ export default function CompetitorAnalysis() {
 
       const data = await response.json()
 
-
-      // Process competitors
       if (data.competitors && data.competitors.length > 0) {
         const competitorsObj: Record<string, Competitor> = {}
 
@@ -116,7 +115,7 @@ export default function CompetitorAnalysis() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="h-[400px]">
-              <CompetitorReviewChart restaurantName="Your Restaurant" competitors={competitors}/>
+              <CompetitorReviewChart restaurantName="Your Restaurant" />
             </div>
           </div>
         </div>
